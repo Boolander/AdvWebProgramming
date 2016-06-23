@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pragprog Books Online Store</title>
+  <title>All Things Overwatch!</title>
   <%= stylesheet_link_tag    "application", media: "all",
     "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -10,16 +10,24 @@
 </head>
 <body class="<%= controller.controller_name %>">
   <div id="banner">
-    <%= image_tag("logo.png") %>
-    <%= @page_title || "Pragmatic Bookshelf" %>
+    <%= image_tag("logo.png", :size => "128x64") %>
+    <%= @page_title || "All Things Overwatch!" %>
   </div>
   <div id="columns">
     <div id="side">
+      <% if @cart %>
+        <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+          <%= render @cart %>
+        <% end %>
+      <% end %>
+
       <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><%=link_to 'Store', store_url %></li>
+        <li><%=link_to 'Contact Information', information_contactus_path  %></li>
+        <li><%=link_to 'Locations', information_locations_path  %></li>
+        <li><%=link_to 'About Us', information_about_path %></li>
+        <li><%=link_to 'Privacy Policy', information_privacy_path %></li>
+        <li><%=link_to 'Terms of Service', information_termsofservice_path %></li>  
       </ul>
     </div>
     <div id="main">

@@ -8,6 +8,8 @@
 #---
 # encoding: utf-8
 Product.delete_all
+Address.delete_all
+Contact.delete_all
 Product.create!(title: 'Funko Pop - Tracer',
  description:
    %{<p>
@@ -71,3 +73,36 @@ Product.create!(title: 'Tracer Statue',
      </p>},
  image_url: 'TracerStatue.jpg',
  price: 699.99)
+ # . . .
+Address.create!(
+ address:
+   %{<p>
+     123 Fake Street
+     Anytown, GA  08765
+     </p>},
+ phone: "147-287-5132")
+ # . . .
+Address.create!(
+ address:
+   %{<p>
+     742 Evergreen Terrace
+     Springfield  09876
+     </p>},
+ phone: "856-222-3456")
+ # . . .
+Contact.create!(
+ name:
+   %{<p>
+       Christopher Booye
+     </p>},
+ email: "christopher.booye\@overwatchstore.com",
+ phone: "609-135-2468")
+ # . . .
+Contact.create!(
+ name:
+   %{<p>
+       Danielle Michelotti
+     </p>},
+ email: "danielle.michelotti\@overwatchstore.com",
+ phone: "609-246-1357")
+ 

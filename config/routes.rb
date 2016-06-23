@@ -7,12 +7,26 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 Depot::Application.routes.draw do
+  resources :orders
+  resources :contacts
+  resources :addresses
   resources :line_items
   resources :carts
+  resources :products
+  get 'information/about'
+
+  get 'information/privacy'
+
+  get 'information/termsofservice'
+  
+  get 'information/contactus'
+
+  get 'information/locations'
+
   get 'store/index'
 
   get "store/index"
-  resources :products
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
