@@ -29,6 +29,15 @@
         <li><%=link_to 'Privacy Policy', information_privacy_path %></li>
         <li><%=link_to 'Terms of Service', information_termsofservice_path %></li>  
       </ul>
+    
+      <% if session[:user_id] %>
+        <ul>
+          <li><%= link_to 'Orders',   orders_path   %></li>
+          <li><%= link_to 'Products', products_path %></li>
+          <li><%= link_to 'Users',    users_path    %></li>
+        </ul>
+        <%= button_to 'Logout', logout_path, method: :delete   %>
+      <% end %>
     </div>
     <div id="main">
       <%= yield %>
