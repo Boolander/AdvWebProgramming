@@ -15,7 +15,7 @@ Product.create!(title: 'Funko Pop - Tracer',
    %{<p>
        <em>From Overwatch, Tracer, as a stylized POP vinyl from Funko! Figure stands 
        3 3/4 inches and comes in a window display box. Check out the other Overwatch 
-       figures from Funko! Collect them all!.
+       figures from Funko! Collect them all!
      </p>},
  image_url: 'TracerPop.jpg',
  price: 10.99)
@@ -25,7 +25,7 @@ Product.create!(title: 'Funko Pop - Winston',
    %{<p>
        <em>From Overwatch, Winston, as a stylized POP vinyl from Funko! Figure stands 
        6 inches and comes in a window display box. Check out the other Overwatch 
-       figures from Funko! Collect them all!.
+       figures from Funko! Collect them all!
      </p>},
  image_url: 'WinstonPop.jpg',
  price: 12.99)
@@ -35,7 +35,7 @@ Product.create!(title: 'Funko Pop - Reaper',
    %{<p>
        <em>From Overwatch, Reaper, as a stylized POP vinyl from Funko! Figure stands 
        3 3/4 inches and comes in a window display box. Check out the other Overwatch 
-       figures from Funko! Collect them all!.
+       figures from Funko! Collect them all!
      </p>},
  image_url: 'ReaperPop.jpg',
  price: 10.99)
@@ -45,7 +45,7 @@ Product.create!(title: 'Funko Pop - Widowmaker',
    %{<p>
        <em>From Overwatch, Widowmaker, as a stylized POP vinyl from Funko! Figure stands 
        3 3/4 inches and comes in a window display box. Check out the other Overwatch 
-       figures from Funko! Collect them all!.
+       figures from Funko! Collect them all!
      </p>},
  image_url: 'WidowmakerPop.jpg',
  price: 10.99)

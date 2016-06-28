@@ -12,11 +12,11 @@ two:
   image_url: MyString
   price: 9.99
 
-ruby: 
-  title:       Programming Ruby 1.9
+tracerpop: 
+  title:       Funko Pop - Tracer
   description: 
-    Ruby is the fastest growing and most exciting dynamic
-    language out there.  If you need to get working programs
-    delivered fast, you should add Ruby to your toolbox.
-  price:       49.50
-  image_url:   ruby.png 
+    From Overwatch, Tracer, as a stylized POP vinyl from Funko! Figure stands 
+    3 3/4 inches and comes in a window display box. Check out the other Overwatch 
+    figures from Funko! Collect them all!
+  price:       10.99
+  image_url:   TracerPop.jpg
