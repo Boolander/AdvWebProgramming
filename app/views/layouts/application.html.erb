@@ -10,8 +10,15 @@
 </head>
 <body class="<%= controller.controller_name %>">
   <div id="banner">
+    <%= form_tag store_path, class: 'locale' do %>
+      <%= select_tag 'set_locale', 
+        options_for_select(LANGUAGES, I18n.locale.to_s),
+        onchange: 'this.form.submit()' %>
+      <%= submit_tag 'submit' %>
+      <%= javascript_tag "$('.locale input').hide()" %>
+    <% end %>
     <%= image_tag("logo.png", :size => "128x64") %>
-    <%= @page_title || "All Things Overwatch!" %>
+    <%= @page_title || t('.title') %>
   </div>
   <div id="columns">
     <div id="side">
@@ -22,14 +29,14 @@
       <% end %>
 
       <ul>
-        <li><%=link_to 'Store', store_url %></li>
-        <li><%=link_to 'Contact Information', information_contactus_path  %></li>
-        <li><%=link_to 'Locations', information_locations_path  %></li>
-        <li><%=link_to 'About Us', information_about_path %></li>
-        <li><%=link_to 'Privacy Policy', information_privacy_path %></li>
-        <li><%=link_to 'Terms of Service', information_termsofservice_path %></li>  
+        <li><%=link_to t('.store'), store_url %></li>
+        <li><%=link_to t('.contact'), information_contactus_path  %></li>
+        <li><%=link_to t('.locations'), information_locations_path  %></li>
+        <li><%=link_to t('.about'), information_about_path %></li>
+        <li><%=link_to t('.privacy'), information_privacy_path %></li>
+        <li><%=link_to t('.terms'), information_termsofservice_path %></li>  
       </ul>
-    
+
       <% if session[:user_id] %>
         <ul>
           <li><%= link_to 'Orders',   orders_path   %></li>

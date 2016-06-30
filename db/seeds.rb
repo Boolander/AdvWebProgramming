@@ -80,7 +80,10 @@ Address.create!(
      123 Fake Street
      Anytown, GA  08765
      </p>},
- phone: "147-287-5132")
+ phone: "147-287-5132",
+ hours: "M-F: 10AM-9PM
+         Sat: 9AM-10PM
+         Sun: 11AM-5PM")
  # . . .
 Address.create!(
  address:
@@ -88,7 +91,10 @@ Address.create!(
      742 Evergreen Terrace
      Springfield  09876
      </p>},
- phone: "856-222-3456")
+ phone: "856-222-3456",
+ hours: "M-F: 10AM-9PM
+         Sat: 9AM-10PM
+         Sun: 11AM-5PM")
  # . . .
 Contact.create!(
  name:
