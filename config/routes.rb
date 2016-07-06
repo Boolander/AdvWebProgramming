@@ -30,6 +30,10 @@ Depot::Application.routes.draw do
 
   get 'information/locations'
 
+  resources :products do
+    get :who_bought, on: :member
+  end
+
   scope '(:locale)' do
     resources :orders
     resources :line_items
@@ -37,9 +41,6 @@ Depot::Application.routes.draw do
     root 'store#index', as: 'store', via: :all
   end
   
-  resources :products do
-    get :who_bought, on: :member
-  end
 
 
   # The priority is based upon order of creation:

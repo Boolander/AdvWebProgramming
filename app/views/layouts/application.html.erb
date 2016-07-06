@@ -35,6 +35,11 @@
         <li><%=link_to t('.about'), information_about_path %></li>
         <li><%=link_to t('.privacy'), information_privacy_path %></li>
         <li><%=link_to t('.terms'), information_termsofservice_path %></li>  
+
+        <% if session[:user_id] == nil %>
+          <li><%= link_to "Login", login_path %></li>
+          <li><%= link_to "Create User", new_user_path %></li>
+        <% end %>
       </ul>
 
       <% if session[:user_id] %>
